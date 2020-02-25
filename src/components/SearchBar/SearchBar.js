@@ -7,7 +7,7 @@ class SearchBar extends React.Component{
         super(props);
         this.state = {
             term: '', 
-            location: '',
+            location: 'Toronto',
             sortBy : 'best_match'
         };
         this.sortByOptions = {
@@ -82,7 +82,7 @@ class SearchBar extends React.Component{
             </div>
             <div className="SearchBar-fields">
                  <input placeholder="Search Businesses" onChange={this.handleTermChange} onKeyPress={this.handleEnterKeyPress}/>
-                 <input placeholder="Where?" onChange={this.handleLocationChange} onKeyPress={this.handleEnterKeyPress}/>
+                 <input placeholder="Where?" onChange={this.handleLocationChange} onKeyPress={this.handleEnterKeyPress} value={this.state.location}/>
             </div>
             <div className="SearchBar-submit">
                 <button onClick={this.handleSearch}>Let's Go</button>
