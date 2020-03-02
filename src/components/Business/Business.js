@@ -11,7 +11,7 @@ class Business extends React.Component {
                 <div className="image-container">
                     <a href={business.url} target='_blank' rel='noopener noreferrer'><img src={business.imageSrc} alt=''/></a> 
                 </div>
-                 <h2>{business.name}</h2>
+                 <a href={business.url} target='_blank' rel='noopener noreferrer'> <h2> {business.name} </h2> </a> 
                  <div className="Business-information">
                      <div className="Business-address">
                          <a href={googleMapsBaseUrl + business.address} target='_blank' rel='noopener noreferrer'>{business.address}</a>
